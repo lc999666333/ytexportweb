@@ -1,0 +1,250 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <title>iOS包</title>
+</head>
+
+<body>
+  <br><a href="" id="cururl" style="text-decoration: none;color: #000000;">当前地址</a>
+
+  <br>
+
+  <div style="text-align:center" id="qrdiv">
+    <a href="https://cli.im/api/qrcode">生成本页二维码</a>
+
+    <br>
+    <br>
+  </div>
+
+  <h2 style="text-align---: center"> <br>
+    <br>
+    包地址:
+      
+    <a id="app1" href="./zip/*.html" download="*.zip">*.zip </a> <br>
+    <br>
+    <!-- <h4>   <a  href="./zip/yunbolive1027-1.html" download="yunbolive1027-1.zip" >
+      yunbaolive1027-1.zip(临时) </a> 
+      最新 但是需要后台服务器更新后才能使用 <br><h4> -->
+
+    <button id="btnbefore" onclick="getLast5files()">之前的包</button>
+    <div id="beforecontain" hidden>
+
+      之前的包
+      <br>
+    </div>
+
+    <br>
+    <br>
+    <br>
+  </h2>
+<div style="text-align: center; margin: 0 auto;">
+  <iframe src="./his.html" frameborder="2" width="80%" height="300" ></iframe>
+
+</div>
+
+  <div style="padding-bottom: 10px;">
+  </div>
+</body>
+
+<script>
+  var applist = [
+// 111111
+
+
+/*replace*/"yunbaolive0122_1925",
+"yunbaolive0121_2200",
+"yunbolive0119",
+
+"yunbolive0118",
+
+"yunbolive0117",
+
+"yunbolive0116",
+"yunbolive0110",
+"yunbolive0108",
+"yunbolive0107",
+"yunbolive0105-2",
+"yunbolive0105",
+"yunbaolive0104_1553",
+"yunbolive1222",
+"yunbolive1220",
+
+"yunbolive1218",
+"yunbolive1216",
+"yunbolive1214",
+
+"yunbolive1212",
+
+"yunbolive1211",
+
+"yunbolive1210",
+
+"yunbaolive1209_1417",
+"yunbaolive1209_1008",
+"yunbolive1208",
+
+"yunbolive1207",
+
+"yunbolive1206",
+"yunbolive1205",
+"yunbaolive1203_1432",
+"yunbaolive1201_2042",
+"yunbaolive1128_0012",
+"yunbaolive1127_2326",
+"yunbaolive1126_2127",
+"yunbaolive1126_0133",
+"yunbaolive1122_1806",
+"yunbaolive1121_0411",
+"yunbaolive1114_1108",
+"yunbaolive1111_1543",
+"yunbaolive1107_1152",
+"yunbaolive1106_1644",
+"yunbaolive1105_1709",
+"yunbaolive1105_1332",
+  "yunbaolive1103_1639",  
+  "yunbolive1031",
+
+  "yunbolive1030",
+
+  "yunbolive1029",
+  "yunbolive1028",
+    "yunbolive1027",
+    "yunbolive1027-1",
+
+    "yunbolive1026-1",
+    "yunbolive1026",
+    "yunbolive1022",
+    "yunbolive1021",
+    "yunbolive1020-2",
+    "yunbolive1020",
+    "yunbolive1019",
+    "yunbolive1015-3",
+    "yunbolive1015-2",
+    "yunbolive1015",
+  ];
+
+
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split("=");
+      if (pair[0] == variable) { return pair[1]; }
+    }
+    return (false);
+  }
+  function replaceParamVal(paramName, replaceWith) {
+    var oUrl = this.location.href.toString();
+    var re = eval('/(' + paramName + '=)([^&]*)/gi');
+    var nUrl = oUrl.replace(re, paramName + '=' + replaceWith);
+    this.location = nUrl;
+    return nUrl
+  }
+  function getQuerya(variable) {
+    var praa = getQueryVariable("a");
+    var tmpdata = new Date();
+
+
+    if (praa == false) {
+      window.location.href = window.location.href + "?a=" + tmpdata.getTime();
+    }
+    else if (tmpdata - praa > 1000 * 60 * 5) {
+      // window.location.href = window.location.href + "?a=" + tmpdata.getTime();
+      window.location.href = replaceParamVal("a", tmpdata.getTime());
+
+    }
+  }
+  getQuerya();
+  function scaleImage() {
+    var img = this;
+    if (!img.aa) {
+
+      img.aa = true;//把状态设为放大状态
+      img.realwidth = img.width;
+      img.realHeight = img.height;
+      img.realStyle = img.style;
+      img.height = document.body.clientWidth * 0.6;
+      img.width = document.body.clientWidth * 0.6;
+    } else {
+      img.aa = false;//把状态设为正常状态
+      img.height = img.realwidth;
+      img.width = img.realHeight;
+      img.style = img.realStyle;
+    }
+  }
+  var images = document.getElementsByTagName('img');//图片元素
+  function loaddo() {
+    var str = window.location.href;
+
+    document.getElementById("cururl").href = str;
+    document.getElementById("cururl").innerHTML = str;
+
+
+    var myParent = document.getElementById("qrdiv");
+
+    var myImage = document.createElement("img");
+    myImage.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + str;
+    myParent.appendChild(myImage);
+    //  myImage.referrerPolicy="no-referrer";
+    myImage.width = "40";
+    myImage.onclick = scaleImage;
+
+    //  非https 浏览器警告
+    //  var myImage = document.createElement("img");
+    // myImage.src = '//api.k780.com:88/?app=qr.get&level=L&size=6&data='+str;
+    // myParent.appendChild(myImage);
+    // myImage.referrerPolicy="no-referrer";
+    // myImage.width = "40";
+    // myImage.onclick = scaleImage;
+
+
+  }
+  window.onload = function () {
+    window.setTimeout(loaddo, 1);
+    // loaddo();
+    var appame = applist[0];
+    var app1 = document.getElementById('app1')
+    app1.href = "./zip/" + appame + ".html";    //增加a标签的href属性
+    app1.innerHTML = appame + ".zip";   //给baia标签添加du内容
+    app1.download = appame + ".zip";
+  }
+
+
+  function getLast5files() {
+    var obtn = document.getElementById("btnbefore");
+    obtn.hidden = true;
+
+    var hiscount = 0;
+    var cDate = new Date();
+    var tmpdata = cDate;
+
+    for (var i = 0; i < applist.length; i++) {
+      var appame = applist[i];
+
+      var oDiv = document.getElementById("beforecontain");;
+      oDiv.hidden = 0;
+      var oA = document.createElement('a');   //创建a标签
+      oA.href = "./zip/" + appame + ".html";    //增加a标签的href属性
+      oA.innerHTML = appame + ".zip";   //给baia标签添加du内容
+      oA.download = appame + ".zip";
+      oDiv.appendChild(oA);  //将a标签添加到div里面
+      oDiv.appendChild(document.createElement('br'));
+
+    }
+
+    return;
+
+  }
+
+
+</script>
+
+
+</html>
