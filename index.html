@@ -22,7 +22,7 @@
     <br>
     正式包地址:
   </h2>
-  <h6>下面三个链接一样 部分链接可能无法访问 </h6>
+  <h6>下面几个链接一样 部分链接可能无法访问 </h6>
   <h3>
   <div id ="links0">
 
@@ -103,75 +103,8 @@
     "yunbaolive0129_1656",
     "yunbaolive0129_0016",
     "yunbaolive0122_1925",
-    "yunbaolive0121_2200",
-    "yunbolive0119",
-
-    "yunbolive0118",
-
-    "yunbolive0117",
-
-    "yunbolive0116",
-    "yunbolive0110",
-    "yunbolive0108",
-    "yunbolive0107",
-    "yunbolive0105-2",
-    "yunbolive0105",
-    "yunbaolive0104_1553",
-    "yunbolive1222",
-    "yunbolive1220",
-
-    "yunbolive1218",
-    "yunbolive1216",
-    "yunbolive1214",
-
-    "yunbolive1212",
-
-    "yunbolive1211",
-
-    "yunbolive1210",
-
-    "yunbaolive1209_1417",
-    "yunbaolive1209_1008",
-    "yunbolive1208",
-
-    "yunbolive1207",
-
-    "yunbolive1206",
-    "yunbolive1205",
-    "yunbaolive1203_1432",
-    "yunbaolive1201_2042",
-    "yunbaolive1128_0012",
-    "yunbaolive1127_2326",
-    "yunbaolive1126_2127",
-    "yunbaolive1126_0133",
-    "yunbaolive1122_1806",
-    "yunbaolive1121_0411",
-    "yunbaolive1114_1108",
-    "yunbaolive1111_1543",
-    "yunbaolive1107_1152",
-    "yunbaolive1106_1644",
-    "yunbaolive1105_1709",
-    "yunbaolive1105_1332",
-    "yunbaolive1103_1639",
-    "yunbolive1031",
-
-    "yunbolive1030",
-
-    "yunbolive1029",
-    "yunbolive1028",
-    "yunbolive1027",
-    "yunbolive1027-1",
-
-    "yunbolive1026-1",
-    "yunbolive1026",
-    "yunbolive1022",
-    "yunbolive1021",
-    "yunbolive1020-2",
-    "yunbolive1020",
-    "yunbolive1019",
-    "yunbolive1015-3",
-    "yunbolive1015-2",
-    "yunbolive1015",
+    "yunbaolive0121_2200"
+    
   ];
 
 
@@ -313,7 +246,12 @@
     "https://ghproxy.com/https://github.com/lc999666333/ytexportweb/blob/master/zip/" 
   
   ];
-    var linktexts = ["githubpages","fastgit","fastgit302","githubraw","ghproxy"];
+    var linktexts = [
+      "github pages(源文件)",
+    "fastgit",
+    "fastgit 302",
+    "github raw",
+    "ghproxy 推荐 速度快"];
     for (var i = 0; i < links.length; i++) {
       var link = links[i];
       var ttt = linktexts[i];
@@ -322,6 +260,8 @@
       oA.innerHTML = appame + ".zip";   //给baia标签添加du内容
       oA.download = appame + ".zip";
       oA.href = link + appame + ".html";    //增加a标签的href属性
+      oA.rel = "noopener noreferrer"
+      oA.referrerPolicy="no-referrer";
       oDiv.appendChild(oA);  //将a标签添加到div里面
 
       var tttext = document.createElement('f');
