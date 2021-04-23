@@ -25,17 +25,17 @@
 
   <h2 style="text-align---: center"> <br>
     <br>
-    正式包地址: 下面三个链接一样 部分链接可能无法访问，选择一个可以使用的
-      
+    正式包地址: <h6>下面三个链接一样 部分链接可能无法访问</h6>
+    <br>
     <a id="app1" href="./zip/*.html" download="*.zip">*.zip </a>下载方式一(page) <br>
     <a id="app2" href="./zip/*.html" download="*.zip">*.zip </a>下载方式二(fastgit) 推荐 <br>
     <a id="app3" href="./zip/*.html" download="*.zip">*.zip </a> 下载方式三(raw)<br>
 
-    https://hub.fastgit.org/lc999666333/ytexportweb
+    <!-- https://hub.fastgit.org/lc999666333/ytexportweb
 
     https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/yunbaolive0420_0231.html
     https://raw.fastgit.org/lc999666333/ytexportweb/master/zip/yunbaolive0422_2159.html
-    https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/yunbaolive0422_2159.html
+    https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/yunbaolive0422_2159.html -->
     <br>
     <!-- <h4>   <a  href="./zip/yunbaolive0218_1521_pre.html" download="yunbaolive0218_1521_pre.zip" >
       yunbaolive0218_1521_pre.zip(pre) </a> 
@@ -244,7 +244,7 @@
     // app2.href = "https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/" + appame + ".html";    //增加a标签的href属性
 
     app2.href = "https://raw.fastgit.org/lc999666333/ytexportweb/master/zip/" + appame + ".html";    //增加a标签的href属性
-
+    app2.rel = "noopener noreferrer"
     app2.innerHTML = appame + ".zip";   //给baia标签添加du内容
     app2.download = appame + ".zip";
 
