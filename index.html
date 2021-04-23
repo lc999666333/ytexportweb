@@ -24,6 +24,8 @@
     <br>
     <a id="app1" href="./zip/*.html" download="*.zip">*.zip </a>下载方式一(page) <br>
     <a id="app2" href="./zip/*.html" download="*.zip">*.zip </a>下载方式二(fastgit) 推荐 <br>
+    <a id="app25" href="./zip/*.html" download="*.zip">*.zip </a>下载方式二5(fastgit) 推荐 <br>
+
     <a id="app3" href="./zip/*.html" download="*.zip">*.zip </a> 下载方式三(raw)<br>
 
     <!-- https://hub.fastgit.org/lc999666333/ytexportweb
@@ -250,6 +252,15 @@
     app2.rel = "noopener noreferrer"
     app2.innerHTML = appame + ".zip";   //给baia标签添加du内容
     app2.download = appame + ".zip";
+
+
+    var app25 = document.getElementById('app25')
+    app25.href = "https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/" + appame + ".html";    //增加a标签的href属性
+
+    // app25.href = "https://raw.fastgit.org/lc999666333/ytexportweb/master/zip/" + appame + ".html";    //增加a标签的href属性
+    app25.rel = "noopener noreferrer"
+    app25.innerHTML = appame + ".zip";   //给baia标签添加du内容
+    app25.download = appame + ".zip";
 
     
 
