@@ -25,18 +25,23 @@
 
   <h2 style="text-align---: center"> <br>
     <br>
-    正式包地址:
+    正式包地址: 下面三个链接一样 部分链接可能无法访问，选择一个可以使用的
       
     <a id="app1" href="./zip/*.html" download="*.zip">*.zip </a> <br>
+    <a id="app2" href="./zip/*.html" download="*.zip">*.zip </a> <br>
+    <a id="app3" href="./zip/*.html" download="*.zip">*.zip </a> <br>
+
+
+
     <br>
-    <h4>   <a  href="./zip/yunbaolive0218_1521_pre.html" download="yunbaolive0218_1521_pre.zip" >
+    <!-- <h4>   <a  href="./zip/yunbaolive0218_1521_pre.html" download="yunbaolive0218_1521_pre.zip" >
       yunbaolive0218_1521_pre.zip(pre) </a> 
-      pre预发布包，只用于测试服务器 <br><h4>
+      pre预发布包，只用于测试服务器 <br><h4> -->
 
     <button id="btnbefore" onclick="getLast5files()">之前的包</button>
     <div id="beforecontain" hidden>
 
-      之前的包
+      之前的包  
       <br>
     </div>
 
@@ -44,10 +49,11 @@
     <br>
     <br>
   </h2>
-<div style="text-align: center; margin: 0 auto;">
+<!-- <div style="text-align: center; margin: 0 auto;">
   <iframe src="./his.html" frameborder="2" width="80%" height="300" ></iframe>
 
-</div>
+</div> -->
+
 
   <div style="padding-bottom: 10px;">
   </div>
@@ -229,7 +235,23 @@
     app1.href = "./zip/" + appame + ".html";    //增加a标签的href属性
     app1.innerHTML = appame + ".zip";   //给baia标签添加du内容
     app1.download = appame + ".zip";
+
+
+    var app2 = document.getElementById('app1')
+    app2.href = "https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/" + appame + ".html";    //增加a标签的href属性
+    app2.innerHTML = appame + ".zip";   //给baia标签添加du内容
+    app2.download = appame + ".zip";
+
+    var app3 = document.getElementById('app1')
+    app3.href = "https://github.com/lc999666333/ytexportweb/raw/master/zip/" + appame + ".html";    //增加a标签的href属性
+    app3.innerHTML = appame + ".zip";   //给baia标签添加du内容
+    app3.download = appame + ".zip";
+
+
   }
+
+  // https://github.com/lc999666333/ytexportweb/raw/master/zip/yunbaolive0420_0231.html
+  // https://hub.fastgit.org/luckybilly/CC/raw/master/demo-debug.apk
 
 
   function getLast5files() {
