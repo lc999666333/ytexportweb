@@ -20,13 +20,24 @@
 
   <h2 style="text-align---: center"> <br>
     <br>
-    正式包地址: <h6>下面三个链接一样 部分链接可能无法访问 </h6>
-    <br>
-    <a id="app1" href="./zip/*.html" download="*.zip">*.zip </a>下载方式一(page) <br>
-    <a id="app2" href="./zip/*.html" download="*.zip">*.zip </a>下载方式二(fastgit) 推荐 <br>
-    <a id="app25" href="./zip/*.html" download="*.zip">*.zip </a>下载方式二5(fastgit) 推荐 <br>
+    正式包地址:
+  </h2>
+  <h6>下面三个链接一样 部分链接可能无法访问 </h6>
+  <h3>
+  <div id ="links0">
 
-    <a id="app3" href="./zip/*.html" download="*.zip">*.zip </a> 下载方式三(raw)<br>
+  </div>
+  </h3> 
+  <div id ="links1" hidden>
+    <br>
+    <a id="app1" href="./zip/*.html" download="*.zip">*.zip </a>下载方式一(page)慢 <br>
+    <a id="app2" href="./zip/*.html" download="*.zip">*.zip </a>下载方式二(fastgit) <br>
+    <a id="app25" href="./zip/*.html" download="*.zip">*.zip </a>下载方式二5(fastgit) <br>
+
+    <a id="app3" href="./zip/*.html" download="*.zip">*.zip </a> 下载方式三(raw)慢2<br>
+    <!-- <a id="app4" href="./zip/*.html" download="*.zip">*.zip </a> 下载方式四(cdn)<br> -->
+    <a id="app5" href="./zip/*.html" download="*.zip">*.zip </a> 下载方式五(ghproxy)<br>
+
 
     <!-- https://hub.fastgit.org/lc999666333/ytexportweb
 
@@ -34,21 +45,24 @@
     https://raw.fastgit.org/lc999666333/ytexportweb/master/zip/yunbaolive0422_2159.html
     https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/yunbaolive0422_2159.html -->
     <br>
-    <!-- <h4>   <a  href="./zip/yunbaolive0218_1521_pre.html" download="yunbaolive0218_1521_pre.zip" >
+
+  </div>
+
+  <!-- <h4>   <a  href="./zip/yunbaolive0218_1521_pre.html" download="yunbaolive0218_1521_pre.zip" >
       yunbaolive0218_1521_pre.zip(pre) </a> 
       pre预发布包，只用于测试服务器 <br><h4> -->
 
-    <button id="btnbefore" onclick="getLast5files()">之前的包</button>
-    <div id="beforecontain" hidden>
+  <button id="btnbefore" onclick="getLast5files()">之前的包</button>
+  <div id="beforecontain" hidden>
 
-      之前的包  
-      <br>
-    </div>
-
+    之前的包
+    <br>
+  </div>
+  <h2>
 
     <div style="text-align:center" id="qrdiv">
       <a href="https://cli.im/api/qrcode">生成本页二维码</a>
-  
+
       <br>
       <br>
     </div>
@@ -57,7 +71,7 @@
     <br>
     <br>
   </h2>
-<!-- <div style="text-align: center; margin: 0 auto;">
+  <!-- <div style="text-align: center; margin: 0 auto;">
   <iframe src="./his.html" frameborder="2" width="80%" height="300" ></iframe>
 
 </div> -->
@@ -73,77 +87,78 @@
 
 
 
-/*replace*/"yunbaolive0422_2159","yunbaolive0420_0231","yunbaolive0417_1454","yunbaolive0414_2325","yunbaolive0411_1252","yunbaolive0410_0730","yunbaolive0408_1102","yunbaolive0407_1657","yunbaolive0406_2154","yunbaolive0331_2341","yunbaolive0328_2111","yunbaolive0327_2348","yunbaolive0321_0104","yunbaolive0319_1531","yunbaolive0315_0052","yunbaolive0313_2229","yunbaolive0311_2343","yunbaolive0308_2341","yunbaolive0303_2247","yunbaolive0303_2112","yunbaolive0228_0110","yunbaolive0227_2119","yunbaolive0222_2316","yunbaolive0221_0807","yunbaolive0218_1723",
-"yunbaolive0218_1521_pre",
-"yunbaolive0215_0104",
-"yunbaolive0210_2225",
-"yunbaolive0208_2344",
-"yunbaolive0207_0045",
-"yunbaolive0206_1459",
-"yunbaolive0206_1413",
-"yunbaolive0205_1615",
-"yunbaolive0205_0022",
-"yunbaolive0203_2342",
-"yunbaolive0131_2130",
-"yunbaolive0129_1656",
-"yunbaolive0129_0016",
-"yunbaolive0122_1925",
-"yunbaolive0121_2200",
-"yunbolive0119",
+/*replace*/"yunbaolive0422_2159", 
+"yunbaolive0420_0231", "yunbaolive0417_1454", "yunbaolive0414_2325", "yunbaolive0411_1252", "yunbaolive0410_0730", "yunbaolive0408_1102", "yunbaolive0407_1657", "yunbaolive0406_2154", "yunbaolive0331_2341", "yunbaolive0328_2111", "yunbaolive0327_2348", "yunbaolive0321_0104", "yunbaolive0319_1531", "yunbaolive0315_0052", "yunbaolive0313_2229", "yunbaolive0311_2343", "yunbaolive0308_2341", "yunbaolive0303_2247", "yunbaolive0303_2112", "yunbaolive0228_0110", "yunbaolive0227_2119", "yunbaolive0222_2316", "yunbaolive0221_0807", "yunbaolive0218_1723",
+    "yunbaolive0218_1521_pre",
+    "yunbaolive0215_0104",
+    "yunbaolive0210_2225",
+    "yunbaolive0208_2344",
+    "yunbaolive0207_0045",
+    "yunbaolive0206_1459",
+    "yunbaolive0206_1413",
+    "yunbaolive0205_1615",
+    "yunbaolive0205_0022",
+    "yunbaolive0203_2342",
+    "yunbaolive0131_2130",
+    "yunbaolive0129_1656",
+    "yunbaolive0129_0016",
+    "yunbaolive0122_1925",
+    "yunbaolive0121_2200",
+    "yunbolive0119",
 
-"yunbolive0118",
+    "yunbolive0118",
 
-"yunbolive0117",
+    "yunbolive0117",
 
-"yunbolive0116",
-"yunbolive0110",
-"yunbolive0108",
-"yunbolive0107",
-"yunbolive0105-2",
-"yunbolive0105",
-"yunbaolive0104_1553",
-"yunbolive1222",
-"yunbolive1220",
+    "yunbolive0116",
+    "yunbolive0110",
+    "yunbolive0108",
+    "yunbolive0107",
+    "yunbolive0105-2",
+    "yunbolive0105",
+    "yunbaolive0104_1553",
+    "yunbolive1222",
+    "yunbolive1220",
 
-"yunbolive1218",
-"yunbolive1216",
-"yunbolive1214",
+    "yunbolive1218",
+    "yunbolive1216",
+    "yunbolive1214",
 
-"yunbolive1212",
+    "yunbolive1212",
 
-"yunbolive1211",
+    "yunbolive1211",
 
-"yunbolive1210",
+    "yunbolive1210",
 
-"yunbaolive1209_1417",
-"yunbaolive1209_1008",
-"yunbolive1208",
+    "yunbaolive1209_1417",
+    "yunbaolive1209_1008",
+    "yunbolive1208",
 
-"yunbolive1207",
+    "yunbolive1207",
 
-"yunbolive1206",
-"yunbolive1205",
-"yunbaolive1203_1432",
-"yunbaolive1201_2042",
-"yunbaolive1128_0012",
-"yunbaolive1127_2326",
-"yunbaolive1126_2127",
-"yunbaolive1126_0133",
-"yunbaolive1122_1806",
-"yunbaolive1121_0411",
-"yunbaolive1114_1108",
-"yunbaolive1111_1543",
-"yunbaolive1107_1152",
-"yunbaolive1106_1644",
-"yunbaolive1105_1709",
-"yunbaolive1105_1332",
-  "yunbaolive1103_1639",  
-  "yunbolive1031",
+    "yunbolive1206",
+    "yunbolive1205",
+    "yunbaolive1203_1432",
+    "yunbaolive1201_2042",
+    "yunbaolive1128_0012",
+    "yunbaolive1127_2326",
+    "yunbaolive1126_2127",
+    "yunbaolive1126_0133",
+    "yunbaolive1122_1806",
+    "yunbaolive1121_0411",
+    "yunbaolive1114_1108",
+    "yunbaolive1111_1543",
+    "yunbaolive1107_1152",
+    "yunbaolive1106_1644",
+    "yunbaolive1105_1709",
+    "yunbaolive1105_1332",
+    "yunbaolive1103_1639",
+    "yunbolive1031",
 
-  "yunbolive1030",
+    "yunbolive1030",
 
-  "yunbolive1029",
-  "yunbolive1028",
+    "yunbolive1029",
+    "yunbolive1028",
     "yunbolive1027",
     "yunbolive1027-1",
 
@@ -237,6 +252,7 @@
   }
   window.onload = function () {
     window.setTimeout(loaddo, 1);
+    resetlinks();
     // loaddo();
     var appame = applist[0];
     var app1 = document.getElementById('app1')
@@ -262,12 +278,64 @@
     app25.innerHTML = appame + ".zip";   //给baia标签添加du内容
     app25.download = appame + ".zip";
 
-    
+
 
     var app3 = document.getElementById('app3')
     app3.href = "https://github.com/lc999666333/ytexportweb/raw/master/zip/" + appame + ".html";    //增加a标签的href属性
     app3.innerHTML = appame + ".zip";   //给baia标签添加du内容
     app3.download = appame + ".zip";
+
+    // var app4 = document.getElementById('app4')
+    // app4.href = "https://cdn.jsdelivr.net/gh/lc999666333/ytexportweb/@master/zip/" + appame + ".html";    //增加a标签的href属性
+    // app4.innerHTML = appame + ".zip";   //给baia标签添加du内容
+    // app4.download = appame + ".zip";
+    // app4.hidden=true;
+    // https://gh.api.99988866.xyz/
+    // https://cdn.jsdelivr.net/gh/luckybilly/CC@master/demo-debug.apk
+
+
+    var app5 = document.getElementById('app5')
+    app5.href = "https://ghproxy.com/https://github.com/lc999666333/ytexportweb/blob/master/zip/" + appame + ".html";    //增加a标签的href属性
+    app5.innerHTML = appame + ".zip";   //给baia标签添加du内容
+    app5.download = appame + ".zip";
+    // https://ghproxy.com/https://github.com/lc999666333/ytexportweb/blob/master/zip/yunbaolive0420_0231.html
+
+  }
+
+
+  function resetlinks() {
+    var appame = applist[0];
+
+    var links = ["./zip/",
+    "https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/",
+    "https://raw.fastgit.org/lc999666333/ytexportweb/master/zip/",
+    "https://github.com/lc999666333/ytexportweb/raw/master/zip/" ,
+    "https://ghproxy.com/https://github.com/lc999666333/ytexportweb/blob/master/zip/" 
+  
+  ];
+    var linktexts = ["githubpages","fastgit","fastgit302","githubraw","ghproxy"];
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i];
+      var ttt = linktexts[i];
+      var oDiv = document.getElementById("links0");;
+      var oA = document.createElement('a');   //创建a标签
+      oA.innerHTML = appame + ".zip";   //给baia标签添加du内容
+      oA.download = appame + ".zip";
+      oA.href = link + appame + ".html";    //增加a标签的href属性
+      oDiv.appendChild(oA);  //将a标签添加到div里面
+
+      var tttext = document.createElement('f');
+      tttext.innerHTML = "\t" + ttt;
+      oDiv.appendChild(tttext);  //将a标签添加到div里面
+
+      oDiv.appendChild(document.createDocumentFragment("<div>"+ttt+"</div>"));
+      oDiv.appendChild(document.createDocumentFragment(ttt));
+
+      oDiv.appendChild(document.createElement('br'));
+    }
+
+
+
 
 
   }
