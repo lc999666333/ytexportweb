@@ -133,7 +133,14 @@
 
 
     if (praa == false) {
-      window.location.href = window.location.href + "?a=" + tmpdata.getTime();
+      if(window.location.href.indexOf('?') != -1){
+        window.location.href = window.location.href + "&a=" + tmpdata.getTime();
+      }else{
+        window.location.href = window.location.href + "?a=" + tmpdata.getTime();
+
+      }
+ 
+
     }
     else if (tmpdata - praa > 1000 * 60 * 5) {
       // window.location.href = window.location.href + "?a=" + tmpdata.getTime();
@@ -243,18 +250,25 @@
     var appame = applist[0];
 
     var links = ["./zip/",
+    "https://lc999666333.github.io/ytexportweb/zip/",
     "https://hub.fastgit.org/lc999666333/ytexportweb/raw/master/zip/",
     "https://raw.fastgit.org/lc999666333/ytexportweb/master/zip/",
     "https://github.com/lc999666333/ytexportweb/raw/master/zip/" ,
-    "https://ghproxy.com/https://github.com/lc999666333/ytexportweb/blob/master/zip/" 
+    "https://ghproxy.com/https://github.com/lc999666333/ytexportweb/blob/master/zip/",
+    "https://api.codetabs.com/v1/proxy/?quest=https://lc999666333.github.io/ytexportweb/zip/", 
   
   ];
     var linktexts = [
       "github pages(源文件)",
+      "github pages",
+
     "fastgit",
     "fastgit 302",
     "github raw",
-    "ghproxy 推荐 速度快"];
+    "ghproxy proxy",
+    "codetabs proxy"
+  
+  ];
     for (var i = 0; i < links.length; i++) {
       var link = links[i];
       var ttt = linktexts[i];
